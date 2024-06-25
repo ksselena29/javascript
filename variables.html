@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+       
+    </script> -->
+
+     <h1 id="myh1">Hello Selena</h1>
+    <button onclick="hello()">Click me</button>
+
+    <h1 id="myh2">Hello Shark!</h1>
+    <input type="text" placeholder="password">
+    <button onclick="happy()">Login</button>
+   
+ 
+    <script>
+         function hello(){
+            document.getElementById("myh1").innerHTML="Welcome Selena! <br>";
+        }
+        document.write("<br><br>Hello selena ");
+       
+        function happy(){
+            alert("Login Success");
+        }
+       
+        var num1=5;
+        if(true){
+            var num2="5";
+            document.write(num1+num2);//55
+            document.write(num1-num2);//0
+        }
+
+        var num1=8;
+        if(true){
+            let num1=9;
+            document.write("local "+num1);
+        }
+        document.write("global "+num1);
+        //local 9 global 8
+
+        // "use strict";
+        num1=5;
+        if(true){
+            num1=7;
+            document.write("local "+num1);
+        }
+        document.write("global "+num1); // local 7 global 7
+
+        var num3=35;
+        var num4="25";
+        //-------arithmetic operators----
+        document.write("<br>"+num3+num4);//3525
+        document.write("<br>"+num3-num4);//NaN
+        document.write("<br>"+num3/num4);//1.41
+        document.write("<br>"+num3%num4);//10
+        document.write("<br>"+num3*num4);//875
+
+        //---relational operators----
+        var num5="35";
+        document.write("<br>"+(num3==num5));//true
+        document.write(num3===num5);//false
+        document.write(num3!=num5);//false
+        document.write(num3!==num5);//true
+
+        //----logical operators----
+        var a=8;
+        var b=6;
+        var c=7;
+        document.write("<br>"+(a>b && a>c))//true
+        document.write(a<b || a<c)//false
+
+        //---increement operators---
+        // 
+         
+
+        //var b=a++;
+        // var b=a;
+        // document.write(b)//5
+        var a=4;
+        var b=a++ + ++a;//4+6=10
+        document.write("<br>"+b)
+        var b=a++ + a++; //9
+        document.write(b)
+        var b=++a + ++a//11
+        document.write(b)
+
+        var b=a-- + --a // 4+2
+        document.write("<br>"+b)
+        var b= a-- + a--//7
+        document.write(b)
+        var b=--a + --a//5
+        document.write(b)
+
+        //---assignment operators--
+       // var a=a+5;
+        a+=5;
+        document.write("<br>"+a)//9
+        a-=2
+        document.write(a)//2
+
+        //---conditional operator---
+        var a = 5;
+        var b = 7;
+        var c = 6;
+        var d = 8;
+
+        var result=a>b?a:b;//7
+        document.write("<br>"+result)
+        var result = (a>b)?(a>c?a:c):(b>c?b:c) //7
+        document.write(result)
+        var result = (a>b&&a>c&&a>d)?a:((b>c&&b>d)?b:(c>d?c:d))//8
+        document.write(result) 
+
+        // var num1=8
+        // var num2=9
+        // if(true){
+        //      var result = num1>num2;
+        //     document.write("<br>"+result)
+        // }
+
+        
+
+    </script>
+   
+</body>
+
+</html>
