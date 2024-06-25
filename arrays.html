@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = [2, 4, 6, 8];
+        // for (let i = 0; i < arr.length; i++) {
+        //     document.write(arr[i]);
+        // }
+
+        //---for of
+        // let arr = [2, 4, 6, 8];
+        // for(let a of arr){
+        //     document.write(a+"<br>");
+        // }
+
+        //to print even numbers
+        // let arr=[2,3,4,5,6,7];
+        // for(let a of arr){
+        //     if(a%2==0)
+        //     document.write(a+"<br>");
+        // }
+
+       // to print small number from given array
+        let arr=[13,3,42,23,67];
+        let small=arr[0];
+        for(let a of arr){
+            if(a<small)
+            small=a;
+        }
+        document.write(small);
+
+        //array push
+        arr = [9, 8, 7, 6, 5]
+        arr.push(4)//push
+        document.write(arr + "<br>")
+        arr.pop()//pop
+        document.write(arr + "<br>")
+        arr.shift()//shift
+        document.write(arr + "<br>")
+        arr.unshift(9)//unshift
+        document.write(arr + "<br>")
+        arr.splice(2, 2)//splice
+        document.write(arr + "<br>")
+        arr.splice(2, 0, 7, 6)
+        document.write(arr + "<br>")
+        arr1 = arr.concat([4, 3])
+        document.write(arr1 + "<br>")
+        arr1 = arr.slice(2, 5)//slice
+        document.write(arr1 + "<br>")
+        delete arr[2];
+        document.write(arr + "<br>")
+        //sorting for alphabets
+        ar = ["apple", "banana", "peach", "grapes", "orange", "black-berry"]
+        ar1 = ar.sort()
+        document.write(ar1 + "<br>")
+        ar1 = ar.sort().reverse()
+        document.write(ar1 + "<br>")
+        //sorting for numbers
+        s_arr = [9, 4, 2, 7, 1]
+        s_arr1 = s_arr.sort(function (a, b) { return b - a })
+        document.write(s_arr1 + "<br>")
+        document.write(s_arr1.reverse() + "<br>")
+
+        //forEach
+        s_arr.forEach(add)
+        function add(a) {
+            document.write(a + 1 + " ")
+        }
+        //forEach arrow function
+        d = [9, 8, 6, 7]
+        d.forEach((a) => { document.write(a + 1 + "<br>") });
+
+
+
+
+        //map
+        array = s_arr.map(multiply)
+        function multiply(a) {
+            return a * 2
+        }
+        document.write("<br>" + array + "<br>")
+        //with arrow
+        array = s_arr.map((a) => a * 2)
+        document.write(array + "<br>")
+
+
+        //filter and map 
+        array = s_arr.map((a) => { if (a % 2 == 0) return a })
+        document.write(array + "<br>")
+
+        //filter
+        array = s_arr.filter(even)
+        function even(a) {
+            if (a % 2 == 0)
+                return a;
+        }
+        document.write(array+"<br>")
+        //filter with arrow
+        array=s_arr.filter((a)=>a%2==0)
+        document.write(array+"<br>");
+
+        //findindex
+        let sarr=[5,3,8]
+        value=sarr.findIndex((a)=>a>5)
+        document.write(value+"<br>");
+
+        //reduce
+        cumm=sarr.reduce((a,b)=>a*b,2)
+        document.write(cumm)
+    </script>
+</body>
+
+</html>
